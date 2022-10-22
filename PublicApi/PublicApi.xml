@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PublicApi</name>
+    </assembly>
+    <members>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetUniversity">
+            <summary>    
+            Lấy danh sách đại học - cao đẳng
+            </summary>    
+            <returns></returns>  
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetCombination">
+            <summary>    
+            Lấy danh sách tổ hợp môn
+            </summary>    
+            <returns></returns>  
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetUniversityByCodeOrName(System.String)">
+            <summary>    
+            Tìm kiếm trường
+            -----------
+            Input : Tên trường hoặc mã trường (người dùng nhập)
+            </summary>   
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.SearchUniversityByTypeAndProvince(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>    
+            Tìm kiếm trường bằng tỉnh hoặc loại trường
+            -------------
+            Input : Id tỉnh thành (getprovince) và Id loại trường (getuniversitytype)
+            </summary>   
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetProvince">
+            <summary>    
+            Lấy danh sách tỉnh thành
+            </summary>   
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetUniversityType">
+            <summary>    
+            Lấy danh sách loại trường
+            </summary>   
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetScoreByUniversity(System.String,System.String)">
+            <summary>    
+            Lấy điểm theo trường
+            -------------
+            Input : mã trường (getuniversity) và năm (từ 2017 đến 2021)
+            </summary>   
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetMajorCombination(System.String)">
+            <summary>    
+            Tìm kiếm tổ hợp môn theo ngành
+            -------------
+            Input : mã ngành (getmajor) và năm
+            </summary> 
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetMajor">
+            <summary>    
+            Lấy danh sách mã ngành
+            </summary> 
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.GetGroupMajor">
+            <summary>    
+            Lấy danh sách tổ hợp ngành
+            </summary> 
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.PredictScoreByCodeMajor(System.Single,System.Single,System.String,System.String,System.Nullable{System.Int32})">
+            <summary>    
+            Dự toán điểm theo mã ngành
+            --------------
+            Input : Từ điểm - Đến điểm - Mã ngành (getmajor) - Mã tổ hợp (getcombination) - Id tỉnh thành (getprovince)
+            </summary> 
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.DetailPredictScoreByCodeMajor(System.Single,System.Single,System.String,System.String,System.String)">
+            <summary>    
+            Dự toán điểm theo mã ngành
+            --------------
+            Input : Lấy dữ liệu input từ dự toán điểm theo ngành trừ Idprovince - Truyền thêm mã trường (CodeUniversity) từ output dự toán điểm theo ngành  
+            </summary> 
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.PredictScoreByGroupMajor(System.Single,System.Single,System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>    
+            Dự toán điểm theo mã tổ hợp ngành
+            --------------
+            Input : Từ điểm - Đến điểm - Mã tổ hợp ngành (getgroupmajor) - Mã tổ hợp (getcombination) - Id tỉnh thành (getprovince)
+            </summary> 
+        </member>
+        <member name="M:PublicApi.Controllers.ApiScoreController.DetailPredictScoreByGroupMajor(System.Single,System.Single,System.String,System.Int32,System.String)">
+            <summary>    
+            Dự toán điểm theo mã tổ hợp ngành
+            --------------
+            Input : Lấy dữ liệu input từ dự toán điểm theo tổ hợp ngành trừ Idprovince - Truyền thêm mã trường (CodeUniversity) từ output dự toán điểm theo tổ hợp ngành  
+            </summary> 
+        </member>
+    </members>
+</doc>
